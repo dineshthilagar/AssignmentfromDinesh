@@ -25,13 +25,13 @@ def possiblePath(visited,distance,s,e):
                 visited[x+u][y+v] = 1
                 distance[x+u][y+v] = dist+1
     ex,ey=e[0],e[1]
-    if distance[ex][ey] <=10:
+    if distance[ex][ey] >0 and distance[ex][ey] <=10:
         print(distance[ex][ey])
     else:
         print("No path is possible")
 N=8
 visited = [[0 for x in range(N)] for y in range(N)]
 distance = [[0 for x in range(N)] for y in range(N)]
-s=[2,2]
-e=[5,1]
+s=[2,2]    #start square 
+e=[5,1]    #end square
 possiblePath(visited,distance,s,e)
